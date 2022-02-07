@@ -18,6 +18,7 @@ document.getElementById("btn-cadastrar").addEventListener("click",()=>{
     remove.style.backgroundColor = "#07A"
     remove.style.color = "#fff"
     remove.style.height  ="1.4rem"
+    remove.style.borderRadius = "10px"
     element.appendChild(remove)
     document.querySelector(".resultado").appendChild(element)
     document.getElementById("input-name").value=""
@@ -27,4 +28,3 @@ function removerItem(remover){
   let removendoItem = remover.parentNode;
   document.querySelector(".resultado").removeChild(removendoItem)
 }
-let promise = Promise.resolve()
