@@ -5,20 +5,21 @@ document.getElementById("btn-cadastrar").addEventListener("click",()=>{
 
   } else{
     let element = document.createElement("li");
+    
     element.innerHTML=`
     ${nome}
+
     `
     let remove = document.createElement("button");
     remove.type = "button";
     remove.textContent = "X"
     remove.setAttribute("onclick","removerItem(this)");
-    remove.style.width ="25%"
+    remove.style.width ="30px"
     remove.style.border = "none"
-    remove.style.borderRadius = "1rem ,4rem"
-    remove.style.backgroundColor = "#07A"
-    remove.style.color = "#fff"
+    remove.style.backgroundColor = "#000"
+    remove.style.color = "red"
     remove.style.height  ="1.4rem"
-    remove.style.borderRadius = "10px"
+    remove.style.borderRadius = ".4rem  "
     element.appendChild(remove)
     document.querySelector(".resultado").appendChild(element)
     document.getElementById("input-name").value=""
@@ -28,3 +29,4 @@ function removerItem(remover){
   let removendoItem = remover.parentNode;
   document.querySelector(".resultado").removeChild(removendoItem)
 }
+

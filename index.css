@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Luckiest+Guy&family=Shojumaru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Luckiest+Guy&family=Mochiy+Pop+P+One&family=Shojumaru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Lobster&family=Luckiest+Guy&family=Mochiy+Pop+P+One&family=Shojumaru&display=swap');
+
+/*FONTES PREDEFINIDAS*/
+:root{
+--fonte-title--:"Dongle";
+--fonte-subtitle--:"Mochiy Pop P One";
+--fonte-buttom--:"Lobster";
+}
+  
   *{
     margin: 0%;
     padding: 0%;
@@ -7,9 +18,7 @@
     height: 100vh;
     width: 100%;
     background-image: linear-gradient(
-      to left,
-      rgb(45, 40, 82),
-      rgba(48, 128, 169, 0.939)
+      to left,#7594FF,#263F94
     );
     display: flex;
     flex-direction: column;
@@ -22,7 +31,7 @@
     text-align: center;
     font-size: 30px;
     color: #fff;
-    font-family: Georgia, 'Times New Roman', Times,   ;
+    font-family:var(--fonte-title--);
     text-shadow: 1px 1px .4rem #000;
     text-transform: capitalize;
   }
@@ -31,10 +40,11 @@
     border: solid 1px #fff;
     box-shadow: 2px 2px 1rem #000;
     width: 70%;
+    gap: 1rem;
     border-radius: .3rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-evenly;
+    justify-content: center;
     align-items: center;
   }
 
@@ -44,30 +54,21 @@
     outline: none;
     border-radius: .4rem;
     margin: 5px;
-    width:80%;
+    width:100%;
   }
   .inputs-to-do-list>.inputs>input[type="button"]{
     border: none;
-    margin: 5px;
-    width: 100%;
-    padding: .4rem .4rem;
+    padding: .8rem .8rem;
     outline: none;
     border-radius: .4rem;
     cursor: pointer;
-    color: #fff;
-    text-shadow: 1px 1px 5px #000;
+    color: #E0BA51;
+    box-shadow:1px 1px 1rem #000;
     font-size: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #07a;
-    transition: all .4s;
+    font-family: var(--fonte-subtitle--);
+    background-color: #263F94;
   }
-  .inputs-to-do-list>input[type="button"]:hover{
-    transform: scale(1.1);
-    background-color: #fff;
-    color: #07a;
-    text-shadow: none;
-    border: solid 1px #07a;
-  }
+ 
 
   .resultado-wrapper{
     position: relative;
@@ -82,7 +83,8 @@
     margin: 1rem;
     height: 25rem;
     border-radius: .4rem;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x:hidden;
     background-color: rgba(0, 0, 0, 0.446);
   }
   
@@ -92,12 +94,12 @@
     border-radius: .4rem;
   }
   .resultado-wrapper::-webkit-scrollbar-thumb{
-    background-color: rgb(57, 57, 151);
+    background-color: #E0BA51;
     border-radius: .7rem;
 
   }
   .resultado-wrapper::-webkit-scrollbar-track{
-    background-color: rgb(77, 117, 134);
+    background-color: #5171E0;
     border-radius: .4rem;
   }
   .resultado{
@@ -118,13 +120,13 @@
     height: 4.4rem;
     margin-top: 2rem;
     border: none;
-    background-color: rgba(50, 99, 124, 0.667);
+    background-color: #7594FF;
     justify-content: center;
     align-items: center;
-    width: 110%;
+    width: 100%;
     color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 25px;
+    font-family:var(--fonte-title--);
+    font-size: 45px;
   }
   .btn_voltar_port{
     display: block;
@@ -144,63 +146,20 @@
     transform: scale(1.1);
   }
 
-  @media(max-width:385px){
-    .titulo-section h1{
-      font-size: 25px;
-    }
+  @media(max-width:492px){
     .inputs-to-do-list{
-      width: 230px;
-      max-width: 30rem;
-    }
-    .inputs-to-do-list > input{
-      width: 15%;
-      font-size: 15px;
-      
-    }
-
-    .inputs-to-do-list>input[type="button"]{
-     font-size: 10px;
-     width: 30%;
-     position: relative;
-     left: -.4rem;
-    }
-    .inputs-to-do-list>input[type="text"]{
-      width: 40%;
-      padding: .4rem .4rem;
-      position: relative;
-      left: -1rem;
-    }
-    .resultado-wrapper{
-      width: 15rem;
-    }
-    .resultado li{
-      font-size: 20px;
-      width: 120%;
-    }
-  } 
-
-  @media(max-width:250px){
-    .inputs-to-do-list{
-      width: 70%;
-      display: flex;
-      flex-direction: column;
-      justify-self: center;
-      align-items: center;
-    }
-    .inputs-to-do-list>input[type="text"]{
-      width: 80%;
-      position: relative;
-      left: 0rem;
+      width: 90%;
     }
 
     .resultado-wrapper{
-      height: 50%;
-      width: 70%;
-    }
-    .inputs-to-do-list>input[type="button"]{
-      width: 80%;
-      position: relative;
-      left: 0;
+      width: 90%;
     }
   }
+
+  @media(max-width:300px){
+    .resultado>li{
+      font-size:30px;
+    }
+  }
+
 
