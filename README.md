@@ -21,6 +21,7 @@
 <li>Tarefa - Será colocado a tarefa que o usuário deseja adicionar;</li>
 <li>Cadastrar  - Botão para adicionar tarefa;</li>
 <li>Remover - Botão para remover a tarefa que o usuário finalizo. </li>
+<li>Checkbox - Serve para marcar à tarefa como feita</li>
 </ul>
 <hr>
 Link : https://todolist-alexandre-app.netlify.app/
