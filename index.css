@@ -54,7 +54,7 @@
     outline: none;
     border-radius: .4rem;
     margin: 5px;
-    width:100%;
+    width:80%;
   }
   .inputs-to-do-list>.inputs>input[type="button"]{
     border: none;
@@ -105,22 +105,24 @@
   .resultado{
     position: absolute;
     top: 1rem;
+    width: 90%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
   }
-
+  
   .resultado>li{
     position: relative;
     border-radius: .4rem;
+    cursor:pointer;
     margin: 10px;
     list-style: none;
     height: 4.4rem;
     margin-top: 2rem;
     border: none;
-    background-color: #7594FF;
+    background-color: #4c577b;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -128,6 +130,16 @@
     font-family:var(--fonte-title--);
     font-size: 45px;
   }
+  li>#label{
+    position: absolute;
+    right:4rem;
+    top: 3rem;
+  }
+  .resultado>li>#label:checked + .label-check {
+    text-decoration: line-through;
+
+  }
+
   .btn_voltar_port{
     display: block;
     border: none;
