@@ -63,10 +63,16 @@
     border-radius: .4rem;
     cursor: pointer;
     color: #E0BA51;
-    box-shadow:1px 1px 1rem #000;
     font-size: 15px;
     font-family: var(--fonte-subtitle--);
     background-color: #263F94;
+    transition: all .3s ease-in-out;
+  }
+
+  .inputs-to-do-list>.inputs>input[type="button"]:hover{
+    background-color: #fff;
+    color: #263F94;
+    border: solid 3px #263f94;
   }
  
 
@@ -139,6 +145,7 @@
     text-decoration: line-through;
 
   }
+
 
   .btn_voltar_port{
     display: block;
