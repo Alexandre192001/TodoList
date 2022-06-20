@@ -24,12 +24,12 @@ document.getElementById("btn-cadastrar").addEventListener("click",()=>{
     remove.style.height  ="1.4rem"
     remove.style.borderRadius = ".4rem  "
     element.appendChild(remove)
-    document.querySelector(".resultado").appendChild(element)
+    document.querySelector(".container-tarefas").appendChild(element)
     document.getElementById("input-name").value=""
   }
 })
 function removerItem(remover){
   let removendoItem = remover.parentNode;
-  document.querySelector(".resultado").removeChild(removendoItem)
+  document.querySelector(".container-tarefas").removeChild(removendoItem)
 }
 

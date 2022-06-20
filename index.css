@@ -8,12 +8,14 @@
 --fonte-subtitle--:"Mochiy Pop P One";
 --fonte-buttom--:"Lobster";
 }
-  
+  /* Zerando valores padrões dos navegadores */
   *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
   }
+
+  /* Sessão main */
   .sessao-principal{
     height: 100vh;
     width: 100%;
@@ -27,6 +29,7 @@
 
   }
 
+  /* Titulo da sessão main */
   .titulo-section{
     text-align: center;
     font-size: 30px;
@@ -36,6 +39,7 @@
     text-transform: capitalize;
   }
 
+  /* Container do input e botão do todo list */
   .inputs-to-do-list{
     border: solid 1px #fff;
     box-shadow: 2px 2px 1rem #000;
@@ -48,6 +52,7 @@
     align-items: center;
   }
 
+  /* Selecionando input do tipo text */
   .inputs-to-do-list>.inputs>input[type="text"]{
     border: none;
     padding: 1rem 1rem;
@@ -56,6 +61,8 @@
     margin: 5px;
     width:80%;
   }
+
+  /* Selecionando input do tipo button */
   .inputs-to-do-list>.inputs>input[type="button"]{
     border: none;
     padding: .8rem .8rem;
@@ -69,14 +76,15 @@
     transition: all .3s ease-in-out;
   }
 
+  /* Adicionando evento de hover no input button */
   .inputs-to-do-list>.inputs>input[type="button"]:hover{
     background-color: #fff;
     color: #263F94;
     border: solid 3px #263f94;
   }
  
-
-  .resultado-wrapper{
+  /* Container de tarefas */
+  .container-wrapper{
     position: relative;
     border: none;
     box-shadow: 3px 3px 1rem #000;
@@ -94,21 +102,24 @@
     background-color: rgba(0, 0, 0, 0.446);
   }
   
-  .resultado-wrapper::-webkit-scrollbar{
+  /* Estilizando scrollbar do container de tarefas */
+  .container-wrapper::-webkit-scrollbar{
     width: 20px;
     border: solid 2px #000;
     border-radius: .4rem;
   }
-  .resultado-wrapper::-webkit-scrollbar-thumb{
+  .container-wrapper::-webkit-scrollbar-thumb{
     background-color: #E0BA51;
     border-radius: .7rem;
 
   }
-  .resultado-wrapper::-webkit-scrollbar-track{
+  .container-wrapper::-webkit-scrollbar-track{
     background-color: #5171E0;
     border-radius: .4rem;
   }
-  .resultado{
+
+  /* Estilizando container da tarefa */
+  .container-tarefas{
     position: absolute;
     top: 1rem;
     width: 90%;
@@ -119,7 +130,8 @@
     align-items:center;
   }
   
-  .resultado>li{
+  /* Estilizando tarefa */
+  .container-tarefas>li{
     position: relative;
     border-radius: .4rem;
     cursor:pointer;
@@ -136,17 +148,21 @@
     font-family:var(--fonte-title--);
     font-size: 45px;
   }
+
+  /* Estilizando label da tarefa */
   li>#label{
     position: absolute;
     right:4rem;
     top: 3rem;
   }
-  .resultado>li>#label:checked + .label-check {
+
+  /* Colocando evento de check na tarefa */
+  .container-tarefas>li>#label:checked + .label-check {
     text-decoration: line-through;
 
   }
 
-
+  /* Estilização do botão voltar */
   .btn_voltar_port{
     display: block;
     border: none;
@@ -161,22 +177,25 @@
     margin: 1rem 0;
     text-decoration: none;
   }
+
+  /* Animação de hover no botão voltar */
   .btn_voltar_port:hover{
     transform: scale(1.1);
   }
 
+  /* Responsividade */
   @media(max-width:492px){
     .inputs-to-do-list{
       width: 90%;
     }
 
-    .resultado-wrapper{
+    .container-wrapper{
       width: 90%;
     }
   }
 
   @media(max-width:300px){
-    .resultado>li{
+    .container-tarefas>li{
       font-size:30px;
     }
   }
