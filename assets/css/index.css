@@ -159,7 +159,6 @@
   /* Colocando evento de check na tarefa */
   .container-tarefas>li>#label:checked + .label-check {
     text-decoration: line-through;
-
   }
 
   /* Estilização do botão voltar */
