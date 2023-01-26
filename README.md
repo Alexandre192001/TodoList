@@ -25,7 +25,7 @@
 <ul>
 <li>Abra o prompt do vscode;</li>
 <li>Escreva - git clone https://github.com/Alexandre192001/TodoList/</li>
-<li>cd calculadora</li>
+<li>cd todolist</li>
 <li>npm install</li>
 </ul>
 <hr>
